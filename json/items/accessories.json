@@ -1,0 +1,26 @@
+[
+	{
+		"id": "0001",
+		"name": "收音機",
+		"description": "只是一個收音機，毫無反應。你需要買各種 CD 才能使其發出聲音。",
+		"image": "img/accessories/0001.jpg",
+		"price": "0",
+		"bonus": "0"
+	},
+	{
+		"id": "0002",
+		"name": "What does the fox say?",
+		"description": "What does the fox say? 單曲，可供收音機使用。",
+		"image": "img/accessories/0002.jpg",
+		"price": "50",
+		"bonus": "0.1"
+	},
+	{
+		"id": "0003",
+		"name": "What does your mother say?",
+		"description": "其實是 What does the fox say? 單曲",
+		"image": "img/accessories/0003.jpg",
+		"price": "100",
+		"bonus": "0"
+	}
+]

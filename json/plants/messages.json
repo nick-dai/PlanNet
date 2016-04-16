@@ -1,0 +1,19 @@
+[
+	{
+		"id": "too-wet",
+		"description": "土壤太濕"
+	},
+	{
+		"id": "too-dry",
+		"description": "土壤太乾"
+	},
+	{
+		"id": "too-hot",
+		"description": "天氣太熱"
+	},
+	{
+		"id": "too-cold",
+		"description": "天氣太冷"
+	}
+	
+]

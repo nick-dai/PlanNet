@@ -1,0 +1,22 @@
+[
+	{
+		"username": "myTestAccount",
+		"paddword": "myTestPw",
+		"email": "test@gmail.com",
+		"coins": "88888",
+		"soundEffect": "true",
+		"backgroundMusic": "false",
+		"facebookToken": "",
+		"maxRecords": "7"
+	},
+	{
+		"username": "myTestAccount1",
+		"paddword": "myTestPw1",
+		"email": "test@gmail.com",
+		"coins": "88888",
+		"soundEffect": "true",
+		"backgroundMusic": "false",
+		"facebookToken": "",
+		"maxRecords": "7"
+	}
+]

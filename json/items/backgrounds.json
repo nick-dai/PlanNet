@@ -1,0 +1,26 @@
+[
+	{
+		"id": "0001",
+		"name": "校園",
+		"description": "這株植物放在你的校園中，看起來真是生氣蓬勃。",
+		"image": "img/backgrounds/0001.jpg",
+		"price": "0",
+		"bonus": "0"
+	},
+	{
+		"id": "0002",
+		"name": "你媽肚子裡",
+		"description": "你媽超胖，胖到所有盆栽都容得下！",
+		"image": "img/backgrounds/0002.jpg",
+		"price": "50",
+		"bonus": "0.1"
+	},
+	{
+		"id": "0003",
+		"name": "泛舟",
+		"description": "你在颱風天出門的時候所發現的泛舟。",
+		"image": "img/backgrounds/0003.jpg",
+		"price": "100",
+		"bonus": "0"
+	}
+]

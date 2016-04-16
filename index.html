@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html np-app="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>我的程式</title>
+	<!-- Optimize for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- jQuery -->
+	<script type="text/javascript" src="jquery-v2.1.4/js/jquery-2.1.4.min.js"></script>
+	<!--Google Icon Font-->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Materialize -->
+	<link type="text/css" rel="stylesheet" href="materialize-v0.97.5/css/materialize.min.css" media="screen,projection">
+	<script type="text/javascript" src="materialize-v0.97.5/js/materialize.min.js"></script>
+	<!-- Animate.css -->
+	<link type="text/css" rel="stylesheet" href="Animate.css/animate.css">
+	<!-- Sweet Alert -->
+	<link type="text/css" rel="stylesheet" href="sweetalert2/sweetalert2.css">
+	<script type="text/javascript" src="sweetalert2/sweetalert2.min.js"></script>
+	<!-- Cordova -->
+	<script src="cordova.js"></script>
+	<!-- Custom stylesheets -->
+	<link type="text/css" rel="stylesheet" href="css/index.css">
+	<script type="text/javascript" src="Parse/parse-1.6.14.min.js"></script>
+	<script type="text/javascript" src="js/cordova.oauth2.js"></script>
+	<script type="text/javascript" src="Moment.js/moment.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/loadFile.js"></script>
+	<script type="text/javascript" src="js/alert.js"></script>
+	<script type="text/javascript" src="js/cordova-init.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<body onload="init()">
+	<audio controls><source src="se/background.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+	<div id="menu" class="side-nav">
+		<div class="one-third-grid">
+			<a href="javascript:load('home');">
+				<img src="img/sidebar/home.png" alt="home" class="menu-icon">
+				<div class="menu-label">首頁</div>
+			</a>
+		</div>
+		<div class="one-third-grid">
+			<a href="javascript:load('info');">
+				<img src="img/sidebar/info.png" alt="info" class="menu-icon">
+				<div class="menu-label">盆栽資訊</div>
+			</a>
+		</div>
+		<div class="one-third-grid">
+			<a href="javascript:display('store');">
+				<img src="img/sidebar/store.png" alt="store" class="menu-icon">
+				<div class="menu-label">商店</div>
+			</a>
+		</div>
+		<div class="one-third-grid">
+			<a href="javascript:display('items');">
+				<img src="img/sidebar/items.png" alt="items" class="menu-icon">
+				<div class="menu-label">我的道具</div>
+			</a>
+		</div>
+		<div class="one-third-grid">
+			<a href="javascript:display('messages');">
+				<img src="img/sidebar/messages.png" alt="messages" class="menu-icon">
+				<div class="menu-label">歷史訊息</div>
+			</a>
+		</div>
+		<div class="one-third-grid">
+			<a href="javascript:display('diary');">
+				<img src="img/sidebar/diary.png" alt="diary" class="menu-icon">
+				<div class="menu-label">日記</div>
+			</a>
+		</div>
+		<div class="half-grid">
+			<a href="javascript:load('settings');">
+				<img src="img/sidebar/settings.png" alt="settings" class="menu-icon">
+				<div class="menu-label">設定</div>
+			</a>
+		</div>
+		<div class="half-grid">
+			<a id="exit">
+				<img src="img/sidebar/exit.png" alt="exit" class="menu-icon">
+				<div class="menu-label">結束</div>
+			</a>
+		</div>
+	</div>
+	<!-- Fixed floating menu button -->
+	<a id="menu-button" href="#" data-activates="menu" class="button-collapse btn-floating btn-large waves-effect waves-light base-color-2"><i class="material-icons">menu</i></a>
+	<!-- Main content page -->
+	<div id="background"></div>
+	<div id="home" class="page">
+		<div id="status">
+			<img src="img/home/user.png" alt="" class="left status-icon">
+			<div id="home-user" class="status-label frame-style valign-wrapper left">
+				<div class="valign">88888</div>
+			</div>
+			<div id="home-coins" class="status-label frame-style valign-wrapper right">
+				<div class="valign">88888</div>
+			</div>
+			<img src="img/home/coins.png" alt="" class="right status-icon">
+		</div>
+		<div id="plant" class="valign-wrapper theme-accent-2">
+			<div class="plant-container valign">
+				<div class="image my-plant"></div>
+				<div class="image my-pot"></div>
+			</div>
+			<div class="arc" id="temperature">
+				<div class="inner" id="temperature-inner"></div>
+			</div>
+			<div class="arc" id="coins">
+				<div class="inner" id="coins-inner"></div>
+			</div>
+			<div class="arc" id="humidity">
+				<div class="inner" id="humidity-inner"></div>
+			</div>
+			<div class="arc" id="luminous">
+				<div class="inner" id="luminous-inner"></div>
+			</div>
+		</div>
+		<div id="chat" class="valign-wrapper frame-style column">
+			<div class="valign">
+				<span id="text">やらないか？</span>
+			</div>
+		</div>
+		<div id="message" class="valign-wrapper frame-style">
+			<div class="valign">
+				<span id="text">やらないか？</span>
+			</div>
+		</div>
+	</div>
+	<div id="info" class="page"></div>
+	<div id="store" class="page"></div>
+	<div id="items" class="page"></div>
+	<div id="diary" class="page"></div>
+	<div id="messages" class="page">
+		<div class="bubble">daa</div>
+		<div class="bubble">daa</div>
+		<div class="bubble">daa</div>
+	</div>
+	<div id="settings" class="page">
+		<div class="frame-style medium column theme-accent-3 valign-wrapper invisible">
+			<div class="valign full-width center-align">程式設定</div>
+		</div>
+		<div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">音效</div>
+			</div>
+			<a id="se" onclick="switchOption($(this));" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div>
+		<div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">背景音樂</div>
+			</div>
+			<a id="se" onclick="switchOption($(this));" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div><div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">通知</div>
+			</div>
+			<a id="se" onclick="switchOption($(this));" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div>
+		<div class="frame-style medium column theme-accent-3 valign-wrapper invisible">
+			<div class="valign full-width center-align">帳戶設定</div>
+		</div>
+		<div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">Facebook</div>
+			</div>
+			<a id="facebook" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div>
+		<div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">Google Calendar</div>
+			</div>
+			<a id="google" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div><div class="frame-style medium column invisible">
+			<img src="img/settings/se.png" alt="" class="left settings-icon">
+			<div class="valign-wrapper left full-height">
+				<div class="valign">天氣</div>
+			</div>
+			<a id="se" onclick="switchOption($(this));" class="valign-wrapper right on-off frame-style theme-accent-2 waves-effect waves-light">
+				<div class="valign">開啟</div>
+			</a>
+		</div>
+		<div id="test"></div>
+	</div>
+</body>
+
+</html>

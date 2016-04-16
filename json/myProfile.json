@@ -1,0 +1,46 @@
+{
+	"user": "myTestAccount",
+	"plants": [
+		{
+			"id": "aloe",
+			"name": "測試用植物",
+			"date": "2015-2-22",
+			"cohesion": "95",
+		}
+	],
+	"records": [
+		{
+			"date": "2015-2-17",
+			"time": "09:00",
+			"temperature": "25",
+			"humidity": "45",
+			"luminous": "80"
+		},
+		{
+			"date": "2015-2-17",
+			"time": "12:00",
+			"temperature": "25",
+			"humidity": "45",
+			"luminous": "80"
+		},{
+			"date": "2015-2-17",
+			"time": "15:00",
+			"temperature": "25",
+			"humidity": "45",
+			"luminous": "80"
+		},{
+			"date": "2015-2-17",
+			"time": "18:00",
+			"temperature": "25",
+			"humidity": "45",
+			"luminous": "80"
+		},{
+			"date": "2015-2-17",
+			"time": "21:00",
+			"temperature": "25",
+			"humidity": "45",
+			"luminous": "80"
+		},
+		
+	]
+}

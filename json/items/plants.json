@@ -1,0 +1,26 @@
+[
+	{
+		"id": "0001",
+		"name": ">.^ 安安請多指教 ^.<",
+		"description": "ㄤㄤ泥豪嗎，我是洨幼苗請多指教。",
+		"image": "img/plants/0001.jpg",
+		"price": "0",
+		"bonus": "0"
+	},
+	{
+		"id": "0002",
+		"name": "泥聽過安麗嗎",
+		"description": "More water, more sunlight, and more 安麗！",
+		"image": "img/plants/0002.jpg",
+		"price": "50",
+		"bonus": "0.1"
+	},
+	{
+		"id": "0003",
+		"name": "You are the apple of my eyes",
+		"description": "其實你在種蘋果喔 >.^！",
+		"image": "img/plants/0003.jpg",
+		"price": "100",
+		"bonus": "0"
+	}
+]
